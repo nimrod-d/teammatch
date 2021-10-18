@@ -1,27 +1,36 @@
 'use strict';
 
+const playerNameInput = document.querySelector('.player-name');
+const playerRateInput = document.querySelector('.player-rate');
+
 let usersList = [];
 
 class User {
-  constructor(playerName, playerRate) {
+  constructor(playerName, playerRate, userID) {
     this.playerName = playerName;
     this.playerRate = playerRate;
+    this.userID = userID;
   }
 }
 
 document.querySelector('.sign-player').addEventListener('click', function () {
-  let playerName = document.querySelector('.player-name').value;
+  let playerName = playerNameInput.value;
 
-  let playerRate = Number(document.querySelector('.player-rate').value);
+  let playerRate = Number(playerRateInput.value);
 
-  const user = new User(playerName, playerRate);
+  let userID = new Date().getTime();
 
-  document
-    .querySelector('.box')
-    .insertAdjacentHTML(
-      'beforeend',
-      `<li class="user">Player: ${playerName} ${playerRate}</li>`
-    );
+  const user = new User(playerName, playerRate, userID);
+
+  document.querySelector('.box').insertAdjacentHTML(
+    'beforeend',
+    `<div class="user-box">
+        <li class="user">Player: ${playerName} ${playerRate}</li>
+         </div>`
+  );
+
+  playerNameInput.value = '';
+  playerRateInput.value = '';
 
   usersList.push(user);
   console.log(user);
