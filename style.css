@@ -22,18 +22,25 @@ body {
 }
 
 .box {
-  color: aliceblue;
-  margin: 50px;
-  padding: 15px;
+  position: relative;
+  left: 10px;
+  /* color: aliceblue; */
+  /* margin: 50px; */
+  /* padding: 15px; */
   width: 300px;
   height: 150px;
-  padding: 150px;
+  /* padding: 150px; */
+}
+
+.h2 {
+  color: black;
+  padding-bottom: 7px;
 }
 
 .input {
   padding: 3px;
   margin-bottom: 5px;
-  border-radius: 10px;
+  border-radius: 20px 15px 20px 10px;
   background-color: rgb(214, 252, 225);
 }
 
@@ -50,7 +57,30 @@ body {
   /* border: double; */
 }
 
+/* .h2-p {
+  color: black;
+  padding-bottom: 7px;
+  text-align: center;
+  padding-left: 300px;
+} */
+
+.user-box {
+  position: relative;
+  left: 600px;
+  color: rgb(10, 10, 10);
+  margin: 50px;
+  /* padding: 75px;
+  width: 60px; */
+  height: 60px;
+}
+
 .user {
+  position: center;
+  right: 10px;
+  position: absolute right;
   width: 300px;
   color: black;
+  /* padding: 60px;
+  width: 50px;
+  height: 40px; */
 }
